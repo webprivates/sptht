@@ -25,9 +25,22 @@ class Gejala_model extends CI_Model {
 	public function edit(){
 		$this->load->view('gejala_edit');
 	}
+
+	function get_list_by_id($id){
+         $sql = "select id,kd_gejala,gejala from tbl_gejala where id in (".$id.")";
+         return $this->db->query($sql);
+     }
+
 	public function getById($id){
 		return	$query =  $this->db->query(" select * from tbl_gejala where id='$id' ")->row_array();
 	}
+
+	function get_by_kelompok($kelompok){
+        $this->db->select('*');
+        $this->db->from('tbl_gejala');
+         $this->db->where('kelompok_gejala_id',$kelompok);
+        return $this->db->get();
+    }
 
 	public function edit_gejala(){
 		$id= $this->input->post('id');
