@@ -13,7 +13,7 @@
 				</tr>
 
 			</table>
-			<button type="submit" name="submit" class="btn btn-primary">Simpan</button>
+			<button type="submit" name="submit" class="btn btn-success">Simpan</button>
 			<a href="<?php echo site_url()?>/kelompok_gejala" class="btn btn-danger">Batal</a>
 		</form>
 	</div>

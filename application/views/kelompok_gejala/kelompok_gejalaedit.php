@@ -13,7 +13,7 @@
 					<td><input type="text" class="form-control" name="keterangan" value="<?php echo $kelompok_gejala['keterangan'] ?>"></td>
 				</tr>
 			</table>
-			<button type="submit" name="submit" class="btn btn-primary btn-sm">Edit</button>
+			<button type="submit" name="submit" class="btn btn-success btn-sm">Edit</button>
 			<a href="<?php echo site_url()?>/kelompok_gejala" class="btn btn-danger btn-sm" >Batal</a>
 		</form>
 	</div>

@@ -17,7 +17,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Sri Kurniyan Sari</h2>
+                <h2>Dr.dr.Masyita Gaffar, Sp.THT.KL</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -58,7 +58,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo base_url() ?>template/production/images/img.jpg" alt="">Sri Kurniyan Sari
+                    <img src="<?php echo base_url() ?>template/production/images/cropper.jpg" alt="">Dr.dr.Masyita Gaffar, Sp.THT.KL
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

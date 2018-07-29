@@ -127,7 +127,7 @@
                 <input type="alamat" id="alamat" name="alamat" class="form-control" placeholder="Masukkan Alamat" required />
               </div><br>
               <div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Registrasi</button>
+                <button class="btn btn-lg btn-success btn-block" type="submit" name="submit">Registrasi</button>
               </div>
             </div>
           </div>
