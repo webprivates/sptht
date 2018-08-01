@@ -11,19 +11,19 @@ class Dashboard extends CI_Controller {
 	// 	if($this->session->userdata('is_login')== FALSE){redirect('admin');}
 	// 	$this->load->model('Penyakit_model');
 	// }
-	
+
 
 	public function admin()
 	{
 		$data['contents'] = 'admin/dashboard';
-		$this->load->view('templates/index',$data);		
+		$this->load->view('templates/index',$data);
 	}
 
 	public function user()
 	{
 		$data['contents'] = 'user/home';
-		$this->load->view('templates/user/index',$data);		
-	} 
+		$this->load->view('templates/user/index',$data);
+	}
 
 	public function diagnosa()
 	{
@@ -34,7 +34,7 @@ class Dashboard extends CI_Controller {
 			$this->load->view('user/course', $data);
 
 		}else{
-			$this->load->view('user/hasil_diagnosa',$data);
+			// $this->load->view('user/hasil_diagnosa',$data);
 			// $data["contentuser"]="user/hasil_diagnosa";
 			$gejala = implode(",", $this->input->post("gejala"));
 			$data["listGejala"] = $this->Gejala_model->get_list_by_id($gejala);
@@ -70,9 +70,11 @@ class Dashboard extends CI_Controller {
 			}
 			usort($tbl_penyakit, "cmp");
 			$data["listPenyakit"] = $tbl_penyakit;
-			$this->load->view('user/course', $data);
+			// $this->load->view('user/course', $data);
+			$this->load->view('user/hasil_diagnosa',$data);
+
 		}
-	
+
 	}
 
 	public function about()
