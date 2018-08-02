@@ -147,7 +147,7 @@
             <?php if(sizeof($listPenyakit)>0) { ?>
                 <p>
                     Berdasarkan gejalanya, unggas tersebut di prediksi mengidap penyakit <b><?php echo $listPenyakit[0]['nm_penyakit'];?></b> dengan tingkat kepercayaan <b><?php echo $listPenyakit[0]['kepercayaan'];?> %</b><br/>
-                    Dengan pemberian obat <b><?php echo $listPenyakit[0]['nama_obat'];?></b> sebagai penanganan awal
+                    Dengan pemberian obat <b><?php echo $listPenyakit[0]['nama_obat'];?></b> sebagai penanganan awal.
                 </p>
             <?php }else{?>
                 <p>
