@@ -28,7 +28,8 @@ class Dashboard extends CI_Controller {
 	public function diagnosa()
 	{
 		// $this->load->view('user/course');
-		if (!$this->input->post('gejala')) {
+		if (!$this->input->post('gejala')) 
+		{
 			// $data['contentuser'] = 'user/diagnosa'; //nama file yang akan jadi kontent di template
 			$data['listKelompok'] = $this->Kelompok_model->get_list_data();
 			$this->load->view('user/course', $data);
@@ -57,9 +58,9 @@ class Dashboard extends CI_Controller {
 				if($combineCF>=0.5)
 				{
 					$tbl_penyakit[$i]=array('kd_penyakit'=>$value->kd_penyakit,
-										'nm_penyakit'=>$value->nm_penyakit,
-										'kepercayaan'=>$combineCF*100,
-										'nama_obat'=>$value->nama_obat);
+											'nm_penyakit'=>$value->nm_penyakit,
+											'kepercayaan'=>$combineCF*100,
+											'nama_obat'=>$value->nama_obat);
 					$i++;
 				}
 			}

@@ -13,7 +13,7 @@ class nilai_cf extends CI_Controller {
 		$data['contents'] = 'nilai_cf/nilai_cflist';
 		$data['nilaicf_data'] = $this->Nilai_model->get_nilai();
 		$this->load->view('templates/index',$data);
-		echo "tes";	
+	
 	}
 
 	public function create(){
