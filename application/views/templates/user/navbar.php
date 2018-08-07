@@ -47,16 +47,16 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="<?php echo site_url() ?>Dashboard/user">Home</a></li>
-                                    <li><a href="<?php echo base_url() ?>registrasi">Diagnosa</a>
-                                        <!--<ul class="dropdown">
+                                    <li><a href="<?php echo base_url() ?>registrasi">Diagnosa</a></li>
+                                       <!--  <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
                                             <li><a href="course.html">Course</a></li>
                                             <li><a href="blog.html">Blog</a></li>
                                             <li><a href="contact.html">Contact</a></li>
                                             <li><a href="elements.html">Elements</a></li>
-                                        </ul>-->
-                                    </li>
+                                        </ul> -->
+                                   
                                     <li><a href="<?php echo site_url() ?>Dashboard/about">About Us</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/contact">Contact</a></li>
                                 </ul>
