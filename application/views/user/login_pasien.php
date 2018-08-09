@@ -123,11 +123,12 @@
               </div><br>
               <div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Log in</button>
-               
               </div>
-            <?php echo form_close() ?>
+              <br><br>
+              <a href="" style="text-align:left  font-size: 14px ; color: #0984e3">Lupa Kata sandi ?</a><br><br>
+              <span style="font-size: 14px;">Belum Memiliki Akun ?</span><a href="<?php echo site_url() ?>/registrasi" style="font-size: 14px; color: #0984e3"> Registrasi/Daftar Sekarang !</a>
 
-            
+            <?php echo form_close() ?>
 
                 <div class="clearfix"></div>
                 <br />

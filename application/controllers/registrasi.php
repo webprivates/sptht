@@ -18,7 +18,7 @@ class registrasi extends CI_Controller {
 	public function create(){
 		if (isset($_POST['submit'])) {
 			$this->Register_model->Insert_regist();
-			redirect('Dashboard/diagnosa');
+			redirect('login_pasien');
 		}
 		// $this->load->view('dashboard/diagnosa');	
 		

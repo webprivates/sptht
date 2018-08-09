@@ -14,7 +14,7 @@ class Register_model extends CI_Model {
 		$nama= $this->input->post('nama');
 		$umur= $this->input->post('umur');
 		$username= $this->input->post('username');
-		$password= $this->input->post('password');
+		$password= md5(($this->input->post('password'));
 		$jenkel= $this->input->post('jenkel');
 		$alamat= $this->input->post('alamat');
 	
