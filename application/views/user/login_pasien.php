@@ -37,16 +37,17 @@
                             <div class="academy-logo">
                                 <a href="index.html"><img src="<?php echo base_url(); ?>template/temp_user/img/core-img/logo3.png" alt=""></a>
                             </div>
-                           <!--  <div class="login-content">
-                                <a href="#">Register Pasien / Pengunjung</a>
-                            </div> -->
+                            <div class="login-content">
+                               <!--  <a href="#">Register Pasien / Pengunjung</a> -->
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
-       <div class="academy-main-menu">
+
+        <!-- Navbar Area -->
+        <div class="academy-main-menu">
             <div class="classy-nav-container breakpoint-off">
                 <div class="container">
                     <!-- Menu -->
@@ -65,104 +66,91 @@
                                 <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
                             </div>
 
-                            <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
                                     <li><a href="<?php echo site_url() ?>Dashboard/user">Home</a></li>
-                                    <li><a href="<?php echo site_url() ?>Dashboard/diagnosa">Diagnosa</a>
+                                    <li><a href="<?php echo site_url() ?>/login_pasien">Diagnosa</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/about">About Us</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/contact">Contact</a></li>
                                     <li><a href="<?php echo base_url() ?>/login_pasien/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                 </ul>
-                            </div>
-                            <!-- Nav End -->
+                            </div>   
                         </div>
 
-           <!-- Calling Info -->
                         <div class="calling-info">
                             <div class="call-center">
                                 <a href="tel:+6282346934663"><i class="icon-telephone-2"></i> <span>(+62) 823 4693 4663</span></a>
                             </div>
-                        </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <br><br><br><br><br>
 
-<!-- ##### metode hasil #####-->
-<div class="content" style="padding:10px 40px;">
-    <h3>Hasil Analisis</h3>
-    <div class="box box-warning">
-        <div class="box-header with-border"><br><br>
-            <h6 class="box-title">Gejala yang dipilih</h6>
-        </div><!-- /.box-header -->
-            <div class="box-body table-responsive">
-            <table id="tbl-list" class="table table-bordered table-striped">
-                <tr>
-                    <th width="50px">No</th>
-                    <th>Gejala</th>
-                </tr>
-                <tr>
-                    <?php $i = 1; foreach($listGejala->result() as $value){?>
-                        <tr>
-                            <td width="30px"><?php echo $i++?></td>
-                            <td><?php echo $value->kd_gejala." - ".$value->gejala?></td>
-                        </tr>
-                    <?php }?>
-                </tr>
-            </table>
-        </div><!--box body-->
-    </div><br><br><!--box-->
-    <div class="box box-success">
-        <div class="box-header with-border">
-            <h6 class="box-title">Hasil Diagnosa</h6>
-        </div><!-- /.box-header -->
-        <div class="box-body">
-            <table id="tbl-list" class="table table-bordered table-striped">
-                <tr>
-                    <th width="50px">No</th>
-                    <th>Penyakit</th>
-                    <th>Tingkat Kepercayaan</th>
-                </tr>
-                <tr>
-                    <?php $i = 1; foreach($listPenyakit as $value){?>
-                        <tr>
-                            <td width="30px"><?php echo $i++?></td>
-                            <td><?php echo $value['kd_penyakit']." - ".$value['nm_penyakit']?></td>
-                            <td><?php echo $value['kepercayaan']?> %</td>
-                        </tr>
-                    <?php }?>
-                </tr>
-            </table>
-        </div><!--box body-->
-    </div><br><br><!--box-->
-
-    <div class="box box-success">
-        <div class="box-header with-border">
-            <h6 class="box-title">Kesimpulan</h6>
-        </div><!-- /.box-header -->
-        <div class="box-body">
-            <?php if(sizeof($listPenyakit)>0) { ?>
-                <p>
-                    Berdasarkan gejalanya, pasien di prediksi mengidap penyakit <b><?php echo $listPenyakit[0]['nm_penyakit'];?></b> dengan tingkat kepercayaan <b><?php echo $listPenyakit[0]['kepercayaan'];?> %</b><br/>
-                    Dengan pemberian obat <b><?php echo $listPenyakit[0]['nama_obat'];?></b> sebagai penanganan awal.
-                </p>
-            <?php }else{?>
-                <p>
-                    Penyakit tidak dapat diprediksi karena tingkat kepercayaan gejala terlalu rendah
-                </p>
-            <?php }?>
-        </div><!--box body-->
-        <div class="box-footer clearfix">
-            <a class="btn btn-sm btn-primary btn-flat pull-right" href="<?php echo base_url()?>/dashboard/diagnosa">Deteksi Ulang</a>
+    <!-- ##### Breadcumb Area Start ##### -->
+    <!-- <div class="breadcumb-area bg-img" style="background-image: url(<?php echo base_url(); ?>template/temp_user/img/bg-img/breadcumb.jpg);">
+        <div class="bradcumbContent">
+            <h2>Registrasi</h2>
         </div>
-    </div><!--box-->
-</div>
+    </div> -->
+    <!-- ##### Breadcumb Area End ##### -->
 
-<!-- template -->
-<div class="bottom-footer-area">
+    <!-- ##### About Us Area Start ##### -->
+   <div>
+
+      <a class="hiddenanchor" id="signup"></a>
+      <a class="hiddenanchor" id="signin"></a>
+
+      <div class="login_wrapper">
+        <div class="animate form login_form">
+            <section class="about-us-area mt-50 section-padding-100">
+        <div class="container">
+          <div class="row" style="text-align:center;">
+            <div class="col-md-6 col-md-offset-2">
+          <section class="login_content">
+            <?php echo form_open('login_pasien/login', array('class'=>'login')); ?>
+              <h3>SISTEM PAKAR DIAGNOSA</h3> <h4><P> P E N Y A K I T  -  T H T </P></h4> 
+              <p>_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_+_</p>
+              <br>
+              <br>
+              <div>
+                <label for="username" class="sr-only">Masukkan Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Username" required autofocus />
+              </div><br>
+              <div>
+                <label for="password"class="sr-only">Masukkan Password></label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Password" required />
+              </div><br>
+              <div>
+                <button class="btn btn-lg btn-primary btn-block" type="submit" name="submit">Log in</button>
+               
+              </div>
+            <?php echo form_close() ?>
+
+            
+
+                <div class="clearfix"></div>
+                <br />
+
+               
+              </div>
+            </form>
+          </section>
+        </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ##### About Us Area End ##### -->
+
+    <!-- ##### Team Area Start ##### -->
+    
+    <!-- ##### Features Area Start ##### -->
+
+<!-- ##### Footer Area Start ##### -->
+   
+        <div class="bottom-footer-area">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -173,7 +161,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
     <!-- ##### Footer Area Start ##### -->
 
     <!-- ##### All Javascript Script ##### -->

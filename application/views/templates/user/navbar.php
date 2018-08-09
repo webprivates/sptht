@@ -47,7 +47,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="<?php echo site_url() ?>Dashboard/user">Home</a></li>
-                                    <li><a href="<?php echo base_url() ?>registrasi">Diagnosa</a></li>
+                                    <li><a href="<?php echo site_url() ?>/login_pasien">Diagnosa</a></li>
                                        <!--  <ul class="dropdown">
                                             <li><a href="index.html">Home</a></li>
                                             <li><a href="about-us.html">About Us</a></li>
@@ -63,3 +63,7 @@
                             </div>
                             <!-- Nav End -->
                         </div>
+                         <ul class="dropdown-menu dropdown-usermenu pull-right">
+                            <li><a href="<?php echo base_url() ?>/login_pasien/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                        </ul>
+                            </li>

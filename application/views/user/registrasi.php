@@ -70,7 +70,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="<?php echo site_url() ?>Dashboard/user">Home</a></li>
-                                    <li><a href="<?php echo site_url() ?>Dashboard/diaagnosa">Diagnosa</a>
+                                    <li><a href="<?php echo site_url() ?>Dashboard/diagnosa">Diagnosa</a>
                                         
                                     <li><a href="<?php echo site_url() ?>Dashboard/about">About Us</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/contact">Contact</a></li>
@@ -109,6 +109,12 @@
              <div>
                 <label for="nama" class="sr-only">Masukkan Nama</label>
                 <input type="text" id="nama" name="nama" class="form-control" placeholder="Masukkan Nama" required autofocus />
+              </div><br><div>
+                <label for="username" class="sr-only">Masukkan Username</label>
+                <input type="text" id="username" name="username" class="form-control" placeholder="Masukkan Username" required autofocus />
+              </div><br><div>
+                <label for="password" class="sr-only">Masukkan Password</label>
+                <input type="text" id="password" name="password" class="form-control" placeholder="Masukkan Password" required autofocus />
               </div><br>
               <div>
                 <label for="umur"class="sr-only">Masukkan Umur></label>

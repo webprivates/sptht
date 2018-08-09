@@ -70,7 +70,7 @@
                             <div class="classynav">
                                 <ul>
                                     <li><a href="<?php echo site_url() ?>Dashboard/user">Home</a></li>
-                                    <li><a href="<?php echo site_url() ?>registrasi">Diagnosa</a>
+                                    <li><a href="<?php echo site_url() ?>/login_pasien">Diagnosa</a>
                                         
                                     <li><a href="<?php echo site_url() ?>Dashboard/about">About Us</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/contact">Contact</a></li>

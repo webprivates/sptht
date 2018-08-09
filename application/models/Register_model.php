@@ -13,12 +13,14 @@ class Register_model extends CI_Model {
 	public function insert_regist(){
 		$nama= $this->input->post('nama');
 		$umur= $this->input->post('umur');
+		$username= $this->input->post('username');
+		$password= $this->input->post('password');
 		$jenkel= $this->input->post('jenkel');
 		$alamat= $this->input->post('alamat');
 	
-		$query = $this->db->query(" INSERT INTO pasien (nama, umur, jenkel, alamat)
+		$query = $this->db->query(" INSERT INTO pasien (nama, umur, username, password, jenkel, alamat)
 									VALUES
-									('$nama','$umur','$jenkel','$alamat') ");
+									('$nama','$umur','$username','$password','$jenkel','$alamat') ");
 		
 		return $query;
 	}
