@@ -59,11 +59,9 @@
                                    
                                     <li><a href="<?php echo site_url() ?>Dashboard/about">About Us</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/contact">Contact</a></li>
+                                    <li><a href="<?php echo base_url() ?>/login_pasien/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                 </ul>
                             </div>
                             <!-- Nav End -->
                         </div>
-                         <ul class="dropdown-menu dropdown-usermenu pull-right">
-                            <li><a href="<?php echo base_url() ?>/login_pasien/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                        </ul>
-                            </li>
+                         
