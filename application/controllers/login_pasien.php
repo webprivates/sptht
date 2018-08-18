@@ -18,6 +18,7 @@ class login_pasien extends CI_Controller {
 		if (isset($_POST['submit'])) {
 			$username = $this->input->post('username');
 			$password = md5($this->input->post('password'));
+
 			$check =$this->Loginpasien_model->checkLogin($username, $password);
 
 			if(!$check)  {
@@ -27,6 +28,7 @@ class login_pasien extends CI_Controller {
 					'username' => $username,
 					'password' => $password,
 					'is_login' => TRUE,
+					'nama' => $check->nama,
 					);
 				$this->session->set_userdata($data);
 				redirect('Dashboard/diagnosa');
@@ -35,7 +37,7 @@ class login_pasien extends CI_Controller {
 	}
 
 	public function logout(){
-		$data = array('$username','$password','is_login');
+		$data = array('$username','$password','is_login','nama');
 		$this->session->unset_userdata($data);
 		redirect('login_pasien');
 	}

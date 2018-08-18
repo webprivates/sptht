@@ -69,6 +69,7 @@ class Dashboard extends CI_Controller {
 			{
 				return ($a["kepercayaan"] > $b["kepercayaan"]) ? -1 : 1;
 			}
+			
 			usort($tbl_penyakit, "cmp");
 			$data["listPenyakit"] = $tbl_penyakit;
 			// $this->load->view('user/course', $data);

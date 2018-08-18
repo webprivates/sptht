@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2018 at 01:36 PM
+-- Generation Time: Aug 18, 2018 at 03:43 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -102,6 +102,8 @@ INSERT INTO `kelompok_gejala` (`id`, `nama`, `keterangan`) VALUES
 CREATE TABLE `pasien` (
   `id` int(9) NOT NULL,
   `nama` varchar(50) NOT NULL,
+  `username` varchar(30) NOT NULL,
+  `password` varchar(255) NOT NULL,
   `umur` varchar(15) NOT NULL,
   `jenkel` enum('Perempuan','Laki-laki') NOT NULL,
   `alamat` varchar(70) NOT NULL
@@ -111,43 +113,11 @@ CREATE TABLE `pasien` (
 -- Dumping data for table `pasien`
 --
 
-INSERT INTO `pasien` (`id`, `nama`, `umur`, `jenkel`, `alamat`) VALUES
-(1, 'dian', '21', 'Perempuan', 'abdesir'),
-(2, 'ani', '21', 'Perempuan', 'pettarani'),
-(10, 'amira', '7 tahun', 'Perempuan', 'samata'),
-(12, 'mifta', '11 tahun', 'Perempuan', 'samata'),
-(13, 'Refi', '22', 'Laki-laki', 'palembang'),
-(14, 'wawan', '19', 'Laki-laki', 'pesantren'),
-(15, 'aku', '2 tahun', 'Perempuan', 'sdsf'),
-(16, 'dsfds', '3', 'Laki-laki', 'dfgd'),
-(17, 'saya', '23', 'Laki-laki', 'fhjk'),
-(18, 'uni', '26', 'Perempuan', 'samata'),
-(19, 'ssa', '7 tahun', 'Laki-laki', 'dgfh'),
-(20, 'dian', '22 tahun', 'Perempuan', 'asd'),
-(21, 'lagi', '12', 'Perempuan', 'jkhsf'),
-(22, 'lagi', '12', 'Perempuan', 'jkhsf'),
-(23, 'lagi', '12', 'Perempuan', 'jkhsf'),
-(24, 'lagi22', '12', 'Perempuan', 'jkhsf'),
-(25, 'lagi3', '11 tahun', 'Perempuan', 'asd'),
-(26, 'nani', '7 tahun', 'Perempuan', ' fg'),
-(27, 'aku', '15 tahun', 'Laki-laki', 'dimana'),
-(28, 'aku', '15 tahun', 'Laki-laki', 'dimana'),
-(29, 'aku', '22 tahun', 'Laki-laki', 'samata'),
-(30, 'fsdgsd', '23', 'Laki-laki', 'samata'),
-(31, 'sds', '3', 'Perempuan', 'sdf'),
-(32, 'wahid', '23 tahun', 'Laki-laki', 'asdasd'),
-(33, 'nisa', '17', 'Perempuan', 'samata'),
-(34, 'sfs', '2', 'Perempuan', 'ds'),
-(35, 'hjkh', '5', 'Perempuan', 'CGFCG'),
-(36, 'test', '2', 'Laki-laki', 'fd'),
-(37, 'tes', '3', 'Laki-laki', 'da'),
-(38, 'dicoba', '3 tahun', 'Perempuan', 'dimana sja'),
-(39, 'hasil', '4', 'Laki-laki', 'dimana'),
-(40, 'dian', '7 tahun', 'Perempuan', 'dimana'),
-(41, 'hasil1', '7', 'Perempuan', 'sad'),
-(42, 'dia', '11 tahun', 'Laki-laki', 'dimana'),
-(43, 'ila', '22 tahun', 'Perempuan', 'dimana'),
-(44, 'pak bewa', '25 tahun', 'Laki-laki', 'kampus');
+INSERT INTO `pasien` (`id`, `nama`, `username`, `password`, `umur`, `jenkel`, `alamat`) VALUES
+(45, 'wiwik', 'wiwik', 'cbb2ed636002294637b461b01c735c88', '21 tahun', 'Perempuan', 'perintis'),
+(46, 'ani', 'hasriani', '21232f297a57a5a743894a0e4a801fc3', '22 tahun', 'Perempuan', 'dimana'),
+(48, 'asda', 'asdf', 'qwer', '3', 'Laki-laki', 'asda'),
+(49, 'Refi', 'aprendi', '4d96c294635019ba56b729675881202a', '22 tahun', 'Laki-laki', 'Lewoleba');
 
 -- --------------------------------------------------------
 
@@ -302,7 +272,7 @@ ALTER TABLE `kelompok_gejala`
 -- AUTO_INCREMENT for table `pasien`
 --
 ALTER TABLE `pasien`
-  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(9) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT for table `tbl_gejala`

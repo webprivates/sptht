@@ -92,7 +92,9 @@
     <br><br><br><br><br>
 
 <!-- ##### metode hasil #####-->
+<h6><strong>Nama Pasien : <?php echo $this->session->set_userdata('nama');?></strong></h6><br>
 <div class="content" style="padding:10px 40px;">
+  
     <h3>Hasil Analisis</h3>
     <div class="box box-warning">
         <div class="box-header with-border"><br><br>
