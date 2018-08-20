@@ -51,6 +51,9 @@
 
         </tbody>
     </table>
+    <br><br>
+    
+        <a href="<?php echo base_url()?>/dashboard/diagnosa" class="btn btn-sm btn-primary btn-flat pull-right" >Kembali</a>
    
 </body>
 </html>

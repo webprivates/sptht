@@ -74,6 +74,7 @@
                                         
                                     <li><a href="<?php echo site_url() ?>Dashboard/about">About Us</a></li>
                                     <li><a href="<?php echo site_url() ?>Dashboard/contact">Contact</a></li>
+                                    <li><a href="<?php echo base_url()?>/dashboard/riwayat"><i class="btn btn-sm btn-default btn-flat pull-right"></i>Lihat Riwayat</a></li>
                                     <li><a href="<?php echo base_url() ?>/login_pasien/logout"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                                 </ul>
                             </div>

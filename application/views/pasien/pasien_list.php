@@ -28,6 +28,7 @@
 				<td>
 					<a href="<?php echo site_url('/pasien/edit/'.$data['id'])?>" class="btn btn-warning btn-sm" >Edit</a>
 					<a href="<?php echo site_url('/pasien/hapus/'.$data['id'])?>" class="btn btn-danger btn-sm">Hapus</a>
+					<a href="<?php echo base_url()?>/dashboard/riwayat" class="btn btn-sm btn-default btn-flat pull-right">Lihat Riwayat</a>
 					
 				</td>
 			</tr>
