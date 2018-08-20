@@ -161,6 +161,7 @@
         </div><!--box body-->
         <div class="box-footer clearfix">
             <a class="btn btn-sm btn-primary btn-flat pull-right" href="<?php echo base_url()?>/dashboard/diagnosa">Deteksi Ulang</a>
+            <button onclick="window.print()" class= btn-danger > Print / Cetak</button>
         </div>
     </div><!--box-->
 </div>

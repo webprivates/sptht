@@ -2,13 +2,24 @@
 
 class Nilai_model extends CI_Model {
 
-	public function get_nilai()
-	{
-
-		//perhatikan baik2 kalau coding,,jangan ada spasi kayak tadi
-		$query=$this->db->query("select * from gejala_penyakit");
-		return $query->result_array();
+	public function get_nilai(){
+		// return $this->db->query("SELECT * FROM gejala_penyakit JOIN penyakit on penyakit.penyakit_id = gejala_penyakit.id ")->result();
+		// return $this->db->get("gejala_penyakit")->result();
+		return $this->db->select('*, gejala_penyakit.id AS gpid ')
+						->from('gejala_penyakit')
+						->join('tbl_gejala', 'tbl_gejala.id = gejala_penyakit.gejala_id ')
+						->join('tbl_penyakit', 'tbl_penyakit.id = gejala_penyakit.penyakit_id ')
+						->get()
+						->result_array();
 	}
+
+	// public function get_nilai()
+	// {
+
+	// 	//perhatikan baik2 kalau coding,,jangan ada spasi kayak tadi
+	// 	$query=$this->db->query("select * from gejala_penyakit");
+	// 	return $query->result_array();
+	// }
 
 	public function insert_nilai(){
 		$gejala_id= $this->input->post('gejala_id');

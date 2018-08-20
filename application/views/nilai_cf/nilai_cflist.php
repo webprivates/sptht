@@ -16,8 +16,8 @@
 				
 			<tr>
 				<td><?php echo $data['id'] ?></td>
-				<td><?php echo $data['gejala_id'] ?></td>
-				<td><?php echo $data['penyakit_id'] ?></td>
+				<td><?php echo $data['gejala'] ?></td>
+				<td><?php echo $data['nm_penyakit'] ?></td>
 				<td><?php echo $data['md'] ?></td>
 				<td><?php echo $data['mb'] ?></td>
 				<td>

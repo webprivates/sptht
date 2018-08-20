@@ -5,10 +5,24 @@ class Gejala_model extends CI_Model {
 	public function get_gejala()
 	{
 
-		//perhatikan baik2 kalau coding,,jangan ada spasi kayak tadi
-		$query=$this->db->query("select * from tbl_gejala");
-		return $query->result_array();
+		// return $this->db->get('gejala')->result();
+		//ini menggunakan query standar
+		//jadi silahkan ppilih mau yg mana sama saja
+		//bye
+		return $this->db->query("SELECT * FROM tbl_gejala JOIN kelompok_gejala on kelompok_gejala.id = tbl_gejala.kelompok_gejala_id")->result();
+		//jadi ini query bawaan CI
+		// return $this->db->select('*')
+		// 		 ->from('gejala')
+		// 		 ->join('kelompok_gejala','kelompok_gejala.id = gejala.kelompok_gejala_id')
+		// 		 ->get()
+		// 		 ->result();
 	}
+
+
+		//perhatikan baik2 kalau coding,,jangan ada spasi kayak tadi
+		// $query=$this->db->query("select * from tbl_gejala");
+		// return $query->result_array();
+
 
 	public function insert_gejala(){
 		$kelompok_gejala_id= $this->input->post('kelompok_gejala_id');
