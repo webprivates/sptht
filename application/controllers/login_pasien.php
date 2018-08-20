@@ -29,6 +29,7 @@ class login_pasien extends CI_Controller {
 					'password' => $password,
 					'is_login' => TRUE,
 					'nama' => $check->nama,
+					'user_id' => $check->id,
 					);
 				$this->session->set_userdata($data);
 				redirect('Dashboard/diagnosa');

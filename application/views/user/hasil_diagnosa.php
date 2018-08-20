@@ -159,6 +159,7 @@
         </div><!--box body-->
         <div class="box-footer clearfix">
             <a class="btn btn-sm btn-primary btn-flat pull-right" href="<?php echo base_url()?>/dashboard/diagnosa">Deteksi Ulang</a>
+            <a class="btn btn-sm btn-primary btn-flat pull-right" href="<?php echo base_url()?>/dashboard/riwayat">Lihat Riwayat</a>
         </div>
     </div><!--box-->
 </div>
