@@ -121,6 +121,11 @@
     </div><br><br><!--box-->
     <div class="box box-success">
         <div class="box-header with-border">
+            <center><h6 class="box-title">Rumus : <br>
+                                    MB Lama + (MB Baru * (1 – MB Lama)) <br>
+                                    MD Lama + (MD Baru * (1 – MD Lama))<br>
+                                    CF = MB – MD
+            </h6></center>
             <h6 class="box-title">Hasil Diagnosa</h6>
         </div><!-- /.box-header -->
         <div class="box-body">
@@ -182,8 +187,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <!-- ##### Footer Area Start ##### -->
 
     <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="<?php echo base_url() ?>template/temp_user/js/jquery/jquery-3.3.1.min.js"></script>
+   <!-- jQuery-2.2.4 js -->
+    <script src="<?php echo base_url() ?>template/temp_user/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="<?php echo base_url() ?>template/temp_user/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->

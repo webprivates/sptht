@@ -11,6 +11,7 @@
 				<th>Umur</th>
 				<th>Jenis Kelamin</th>
 				<th>Alamat</th>
+				<th>Riwayat Pasien</th>
 				<th>Aksi</th>
 
 			</tr>
@@ -24,11 +25,14 @@
 				<td><?php echo $data['umur'] ?></td>
 				<td><?php echo $data['jenkel'] ?></td>
 				<td><?php echo $data['alamat'] ?></td>
+				<td>
+					<a href="<?php echo base_url()?>/dashboard/riwayat" class="btn btn-sm btn-default btn-flat pull-right">Lihat Riwayat</a>
+				</td>
 				
 				<td>
 					<a href="<?php echo site_url('/pasien/edit/'.$data['id'])?>" class="btn btn-warning btn-sm" >Edit</a>
 					<a href="<?php echo site_url('/pasien/hapus/'.$data['id'])?>" class="btn btn-danger btn-sm">Hapus</a>
-					<a href="<?php echo base_url()?>/dashboard/riwayat" class="btn btn-sm btn-default btn-flat pull-right">Lihat Riwayat</a>
+					
 					
 				</td>
 			</tr>

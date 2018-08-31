@@ -313,7 +313,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- ##### All Javascript Script ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="<?php echo base_url() ?>template/temp_user/js/jquery/jquery-3.3.1.min.js"></script>
+    <script src="<?php echo base_url() ?>template/temp_user/js/jquery/jquery-2.2.4.min.js"></script>
     <!-- Popper js -->
     <script src="<?php echo base_url() ?>template/temp_user/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
