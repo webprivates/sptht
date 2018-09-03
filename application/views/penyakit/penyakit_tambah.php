@@ -11,10 +11,6 @@
 					<td>Masukkan Nama Penyakit</td>
 					<td><input type="text" class="form-control" name="nm_penyakit"></td>
 				</tr>
-				<tr>
-					<td>Masukkan Nama Obat</td>
-					<td><input type="text" class="form-control" name="nama_obat"></td>
-				</tr>
 
 			</table>
 			<button type="submit" name="submit" class="btn btn-primary">Simpan</button>

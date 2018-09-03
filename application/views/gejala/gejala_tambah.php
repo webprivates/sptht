@@ -22,6 +22,10 @@
 					<td>Masukkan Gejala</td>
 					<td><input type="text" class="form-control" name="gejala"></td>
 				</tr>
+				<tr>
+					<td>Masukkan Nama Obat</td>
+					<td><input type="text" class="form-control" name="nama_obat"></td>
+				</tr>
 
 			</table>
 			<button type="submit" name="submit" class="btn btn-success">Simpan</button>

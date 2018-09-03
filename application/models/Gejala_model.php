@@ -28,10 +28,11 @@ class Gejala_model extends CI_Model {
 		$kelompok_gejala_id= $this->input->post('kelompok_gejala_id');
 		$kd_gejala= $this->input->post('kd_gejala');
 		$gejala= $this->input->post('gejala');
+		$nama_obat= $this->input->post('nama_obat');
 	
-		$query = $this->db->query(" INSERT INTO tbl_gejala (kelompok_gejala_id,kd_gejala, gejala)
+		$query = $this->db->query(" INSERT INTO tbl_gejala (kelompok_gejala_id,kd_gejala, gejala, nama_obat)
 									VALUES
-									('$kelompok_gejala_id','$kd_gejala','$gejala') ");
+									('$kelompok_gejala_id','$kd_gejala','$gejala','$nama_obat') ");
 		
 		return $query;
 	}
@@ -61,8 +62,9 @@ class Gejala_model extends CI_Model {
 		$kelompok_gejala_id= $this->input->post('kelompok_gejala_id');
 		$kd_gejala= $this->input->post('kd_gejala');
 		$gejala= $this->input->post('gejala');
+		$nama_obat= $this->input->post('nama_obat');
 
-		$query = $this->db->query(" UPDATE tbl_gejala SET kelompok_gejala_id='$kelompok_gejala_id', kd_gejala='$kd_gejala', gejala='$gejala'
+		$query = $this->db->query(" UPDATE tbl_gejala SET kelompok_gejala_id='$kelompok_gejala_id', kd_gejala='$kd_gejala', gejala='$gejala',nama_obat='$nama_obat'
 									WHERE id='$id' ");
 		return $query;
 	}

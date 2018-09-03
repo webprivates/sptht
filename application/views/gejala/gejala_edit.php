@@ -24,6 +24,10 @@
 					<td>Masukkan Gejala</td>
 					<td><input type="text" class="form-control" name="gejala" value="<?php echo $gejala['gejala'] ?>"></td>
 				</tr>
+				<tr>
+					<td>Masukkan Nama Obat</td>
+					<td><input type="text" class="form-control" name="nama_obat" value="<?php echo $nama_obat['nama_obat'] ?>"></td>
+				</tr>
 
 			</table>
 			<button type="submit" name="submit" class="btn btn-warning btn-sm">Edit</button>

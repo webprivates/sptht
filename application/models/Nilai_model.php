@@ -64,7 +64,7 @@ class Nilai_model extends CI_Model {
 	}
 
 	function get_by_gejala($gejala){
-         $sql = "select distinct penyakit_id,p.kd_penyakit,p.nm_penyakit,p.nama_obat from gejala_penyakit gp inner join tbl_penyakit p on gp.penyakit_id=p.id where gejala_id in (".$gejala.") order by penyakit_id,gejala_id";
+         $sql = "select distinct penyakit_id,p.kd_penyakit,p.nm_penyakit from gejala_penyakit gp inner join tbl_penyakit p on gp.penyakit_id=p.id where gejala_id in (".$gejala.") order by penyakit_id,gejala_id";
          return $this->db->query($sql);
      }
 

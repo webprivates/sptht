@@ -12,10 +12,6 @@
 					<td>Masukkan Nama Penyakit</td>
 					<td><input type="text" class="form-control" name="nm_penyakit" value="<?php echo $Penyakit['nm_penyakit'] ?>"></td>
 				</tr>
-				<tr>
-					<td>Masukkan Nama Obat</td>
-					<td><input type="text" class="form-control" name="nama_obat" value="<?php echo $Penyakit['nama_obat'] ?>"></td>
-				</tr>
 			</table>
 			<button type="submit" name="submit" class="btn btn-primary btn-sm">Edit</button>
 			<a href="<?php echo site_url()?>/penyakit" class="btn btn-danger btn-sm" >Batal</a>

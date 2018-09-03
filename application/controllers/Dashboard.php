@@ -62,8 +62,9 @@ class Dashboard extends CI_Controller {
 					$tbl_penyakit[$i]=array('kd_penyakit'=>$value->kd_penyakit,
 											'nm_penyakit'=>$value->nm_penyakit,
 											'kepercayaan'=>$combineCF*100,
-											'nama_obat'=>$value->nama_obat,
 											'user_id' =>$user_login);
+
+					$tbl_gejala[$i]=array('nama_obat'=>$value->nama_obat);
 					$i++;
 				}
 			}
@@ -88,7 +89,7 @@ class Dashboard extends CI_Controller {
 				'kode' =>$tbl_penyakit[0]['kd_penyakit'],
 				'nama' =>$tbl_penyakit[0]['nm_penyakit'],
 				'kepercayaan' =>$tbl_penyakit[0]['kepercayaan'],
-				'nama_obat' =>$tbl_penyakit[0]['nama_obat'],
+				'nama_obat' =>$tbl_gejala[0]['nama_obat'],
 			);
 			$this->db->insert('diagnosa', $data_hasil);
 			// $this->load->view('user/course', $data);
