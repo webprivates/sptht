@@ -64,7 +64,7 @@ class Dashboard extends CI_Controller {
 											'kepercayaan'=>$combineCF*100,
 											'user_id' =>$user_login);
 
-					$tbl_gejala[$i]=array('nama_obat'=>$value->nama_obat);
+					$tbl_gejala[$i]=array('nama_obat'=>$value2 ->nama_obat);
 					$i++;
 				}
 			}
@@ -82,8 +82,9 @@ class Dashboard extends CI_Controller {
 				return ($a["kepercayaan"] > $b["kepercayaan"]) ? -1 : 1;
 			}
 			
-			usort($tbl_penyakit, "cmp");
+			usort($tbl_penyakit,$tbl_gejala, "cmp");
 			$data["listPenyakit"] = $tbl_penyakit;
+			$data["listGejala"] = $tbl_gejala;
 			$data_hasil = array(
 				'user_id' =>$tbl_penyakit[0]['user_id'],
 				'kode' =>$tbl_penyakit[0]['kd_penyakit'],

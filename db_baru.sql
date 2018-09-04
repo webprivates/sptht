@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 31, 2018 at 05:35 PM
+-- Generation Time: Sep 04, 2018 at 03:54 AM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
 
@@ -119,7 +119,9 @@ INSERT INTO `diagnosa` (`id`, `user_id`, `kode`, `nama`, `kepercayaan`, `nama_ob
 (74, 45, 'KP1', 'Otitis Media Supuratif Akut', 96, 'Antibiotik (Analgetik), dan Anti-radang (Inflamasi)', '2018-08-30 07:21:52'),
 (75, 45, 'KP1', 'Otitis Media Supuratif Akut', 96, 'Antibiotik (Analgetik), dan Anti-radang (Inflamasi)', '2018-08-30 07:22:31'),
 (76, 45, 'KP1', 'Otitis Media Supuratif Akut', 96, 'Antibiotik (Analgetik), dan Anti-radang (Inflamasi)', '2018-08-30 07:23:08'),
-(77, 45, 'KP2', 'Laryngopharyngeal Reflux', 80, 'Anti-reflux (Proton-pump inhibitor)', '2018-08-31 07:08:59');
+(77, 45, 'KP2', 'Laryngopharyngeal Reflux', 80, 'Anti-reflux (Proton-pump inhibitor)', '2018-08-31 07:08:59'),
+(78, 45, 'KP5', 'Rhinitis Kronis', 90, '', '2018-09-03 08:29:48'),
+(79, 45, 'KP4', 'Rhinitis Alergi', 90, '', '2018-09-03 08:30:01');
 
 -- --------------------------------------------------------
 
@@ -454,7 +456,30 @@ INSERT INTO `riwayat` (`user_id`, `gejala_id`, `created_at`) VALUES
 (45, 1, '2018-08-30 07:23:08'),
 (45, 2, '2018-08-30 07:23:08'),
 (45, 4, '2018-08-30 07:23:08'),
-(45, 18, '2018-08-31 07:08:59');
+(45, 18, '2018-08-31 07:08:59'),
+(45, 7, '2018-09-03 08:27:43'),
+(45, 9, '2018-09-03 08:27:43'),
+(45, 22, '2018-09-03 08:27:43'),
+(45, 7, '2018-09-03 08:28:34'),
+(45, 9, '2018-09-03 08:28:34'),
+(45, 22, '2018-09-03 08:28:34'),
+(45, 7, '2018-09-03 08:28:39'),
+(45, 9, '2018-09-03 08:28:39'),
+(45, 22, '2018-09-03 08:28:39'),
+(45, 7, '2018-09-03 08:29:01'),
+(45, 9, '2018-09-03 08:29:01'),
+(45, 22, '2018-09-03 08:29:01'),
+(45, 7, '2018-09-03 08:29:48'),
+(45, 9, '2018-09-03 08:29:48'),
+(45, 22, '2018-09-03 08:29:48'),
+(45, 7, '2018-09-03 08:30:00'),
+(45, 9, '2018-09-03 08:30:00'),
+(45, 18, '2018-09-03 08:30:00'),
+(45, 22, '2018-09-03 08:30:00'),
+(45, 7, '2018-09-03 08:30:16'),
+(45, 9, '2018-09-03 08:30:16'),
+(45, 18, '2018-09-03 08:30:16'),
+(45, 22, '2018-09-03 08:30:16');
 
 -- --------------------------------------------------------
 
@@ -466,31 +491,32 @@ CREATE TABLE `tbl_gejala` (
   `id` int(11) NOT NULL,
   `kelompok_gejala_id` int(11) NOT NULL,
   `kd_gejala` varchar(5) NOT NULL,
-  `gejala` varchar(30) NOT NULL
+  `gejala` varchar(30) NOT NULL,
+  `nama_obat` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_gejala`
 --
 
-INSERT INTO `tbl_gejala` (`id`, `kelompok_gejala_id`, `kd_gejala`, `gejala`) VALUES
-(1, 1, 'KG1', 'Gangguan Pendengaran'),
-(2, 1, 'KG2', 'Sakit Telinga'),
-(3, 2, 'KG3', 'Ingus Encer'),
-(4, 1, 'KG4', 'Gatal Pada Telinga'),
-(5, 2, 'KG5', 'Hidung Tersumbat'),
-(6, 1, 'KG6', 'Keluar Cairan Dari Telinga'),
-(7, 2, 'KG7', 'Bersin-bersin Serial'),
-(8, 3, 'KG8', 'Batuk-batuk'),
-(9, 2, 'KG9', 'Sering Beringus'),
-(10, 3, 'KG10', 'Banyak Lendir Ditenggorokan'),
-(11, 1, 'KG11', 'Pendengaran Bergemah'),
-(12, 2, 'KG12', 'Keluar Ingus'),
-(18, 3, 'KG13', 'Rasa Mengganjal Ditenggorokan'),
-(19, 1, 'KG14', 'Rasa Tersumbat'),
-(20, 2, 'KG15', 'Gatal Pada Hidung'),
-(21, 1, 'KG16', 'Mendengung'),
-(22, 4, 'KG17', 'Sakit Kepala');
+INSERT INTO `tbl_gejala` (`id`, `kelompok_gejala_id`, `kd_gejala`, `gejala`, `nama_obat`) VALUES
+(1, 1, 'KG1', 'Gangguan Pendengaran', 'Forumen'),
+(2, 1, 'KG2', 'Sakit Telinga', 'Methyl Prednisolon'),
+(3, 2, 'KG3', 'Ingus Encer', 'Dexatromethorphan'),
+(4, 1, 'KG4', 'Gatal Pada Telinga', 'Cetirizine'),
+(5, 2, 'KG5', 'Hidung Tersumbat', 'Nasal Spray (obat semprot hidung)'),
+(6, 1, 'KG6', 'Keluar Cairan Dari Telinga', 'Antibiotik dan Obat Tetes'),
+(7, 2, 'KG7', 'Bersin-bersin Serial', 'CTM'),
+(8, 3, 'KG8', 'Batuk-batuk', 'Ambroxol'),
+(9, 2, 'KG9', 'Sering Beringus', 'Dexatromethorphan'),
+(10, 3, 'KG10', 'Banyak Lendir Ditenggorokan', 'Vectrine'),
+(11, 1, 'KG11', 'Pendengaran Bergemah', 'Forumen'),
+(12, 2, 'KG12', 'Keluar Ingus', 'Dexatromethorphan'),
+(18, 3, 'KG13', 'Rasa Mengganjal Ditenggorokan', 'Methyl Prednisolonenaproxen sodium'),
+(19, 1, 'KG14', 'Rasa Tersumbat', 'Naproxen Sodium'),
+(20, 2, 'KG15', 'Gatal Pada Hidung', 'Dekongestan'),
+(21, 1, 'KG16', 'Mendengung', 'Antidepresan'),
+(22, 4, 'KG17', 'Sakit Kepala', 'Acetaminophen');
 
 -- --------------------------------------------------------
 
@@ -501,22 +527,21 @@ INSERT INTO `tbl_gejala` (`id`, `kelompok_gejala_id`, `kd_gejala`, `gejala`) VAL
 CREATE TABLE `tbl_penyakit` (
   `id` int(11) NOT NULL,
   `kd_penyakit` varchar(5) NOT NULL,
-  `nm_penyakit` varchar(50) NOT NULL,
-  `nama_obat` varchar(80) NOT NULL
+  `nm_penyakit` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_penyakit`
 --
 
-INSERT INTO `tbl_penyakit` (`id`, `kd_penyakit`, `nm_penyakit`, `nama_obat`) VALUES
-(1, 'KP1', 'Otitis Media Supuratif Akut', 'Antibiotik (Analgetik), dan Anti-radang (Inflamasi)'),
-(2, 'KP2', 'Laryngopharyngeal Reflux', 'Anti-reflux (Proton-pump inhibitor)'),
-(3, 'KP3', 'Otitis Externa', 'Antibiotik, Metilprednisolon, dan Analgetik'),
-(4, 'KP4', 'Rhinitis Alergi', 'Obat Semprot Hidung (Nasalsprei Semprot Steroid)'),
-(5, 'KP5', 'Rhinitis Kronis', 'Dekongestan, Steroit, Pseudo Evedrim Semprot Hidung, dan Pseudo Evedrim Tablet'),
-(6, 'KP6', 'Otitis Media Kronik', 'Antibiotik, dan Obat demam'),
-(7, 'KP7', 'Rhinitis Akut', 'Antibiotik, Dekongestan (Pseudo Evetrim Tablet Minum)');
+INSERT INTO `tbl_penyakit` (`id`, `kd_penyakit`, `nm_penyakit`) VALUES
+(1, 'KP1', 'Otitis Media Supuratif Akut'),
+(2, 'KP2', 'Laryngopharyngeal Reflux'),
+(3, 'KP3', 'Otitis Externa'),
+(4, 'KP4', 'Rhinitis Alergi'),
+(5, 'KP5', 'Rhinitis Kronis'),
+(6, 'KP6', 'Otitis Media Kronik'),
+(7, 'KP7', 'Rhinitis Akut');
 
 -- --------------------------------------------------------
 
@@ -596,7 +621,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `diagnosa`
 --
 ALTER TABLE `diagnosa`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=78;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=80;
 
 --
 -- AUTO_INCREMENT for table `gejala_penyakit`
